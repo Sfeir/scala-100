@@ -1,3 +1,5 @@
+package com.sfeir.school.scala
+
 /**
   * Sfeir School - Scala 100
   */

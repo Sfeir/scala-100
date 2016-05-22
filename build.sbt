@@ -14,4 +14,4 @@ scalacOptions ++= List(
   "-encoding", "UTF-8"
 )
 
-// initialCommands in console := "import com.sfeir.school.scala._"
+initialCommands in console := "import com.sfeir.school.scala._"
