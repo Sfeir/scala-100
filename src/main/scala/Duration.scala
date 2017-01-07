@@ -7,4 +7,7 @@ class Duration(val days: Int, val hours: Int) {
   val asHours: Int =
     days * 8 + hours
 
+  def plus(that: Duration): Int =
+    this.asHours + that.asHours
+
 }
