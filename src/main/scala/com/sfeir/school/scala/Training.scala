@@ -19,6 +19,10 @@ case class Training(topic: String, level: Int, planning: Seq[(Int, Location)]) {
       case `from` +: _ +: `to` +: _ => true
       case _ => false
     }
+
+  def whenAt(location: Location): Option[Int] =
+    // Could also be written in short notation: planning find (_._2 == location) map (_._1)
+    planning.find(plan => plan._2 == location).map(found => found._1)
 }
 
 

@@ -16,6 +16,6 @@ case class SfeirSchool(trainings: Set[Training]) {
   def sessionsAt(location: Location): Set[(Int, Training)] =
     for {
       training <- trainings
-      (day, `location`) <- training.planning
+      day <- training.whenAt(location)
     } yield (day, training)
 }
