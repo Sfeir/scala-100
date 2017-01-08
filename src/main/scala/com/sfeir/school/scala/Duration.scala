@@ -7,11 +7,11 @@ package com.sfeir.school.scala
 object Duration {
 
   def fromHours(hours: Int): Duration =
-    new Duration(hours / 8, hours % 8)
+    Duration(hours / 8, hours % 8)
 
 }
 
-class Duration(val days: Int = 0, val hours: Int = 0) {
+case class Duration(days: Int = 0, hours: Int = 0) {
   require(hours >= 0 && hours <= 7, "Hours must be between 0 and 7")
 
   val asHours: Int =
