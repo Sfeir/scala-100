@@ -10,4 +10,7 @@ class Duration(val days: Int, val hours: Int) {
   def plus(that: Duration): Int =
     this.asHours + that.asHours
 
+  def +(that: Duration): Int =
+    plus(that)
+
 }
