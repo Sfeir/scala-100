@@ -15,4 +15,9 @@ case class Training(topic: String, level: Int, planning: Seq[(Int, Location)]) {
 }
 
 
-case class Location(name: String)
+sealed abstract class Location {
+  def name: String
+}
+
+case class SfeirEntity(name: String) extends Location
+case class Company(name: String, hasWifi: Boolean = true) extends Location
