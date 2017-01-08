@@ -1,7 +1,7 @@
 /**
   * Sfeir School - Scala 100
   */
-class Duration(val days: Int, val hours: Int) {
+class Duration(val days: Int = 0, val hours: Int = 0) {
   // TODO: Check that hours is between 0 and 8
 
   val asHours: Int =
