@@ -11,7 +11,7 @@ object Duration {
 
 }
 
-case class Duration(days: Int = 0, hours: Int = 0) {
+case class Duration(days: Int = 0, hours: Int = 0) extends Ordered[Duration] {
   require(hours >= 0 && hours <= 7, "Hours must be between 0 and 7")
 
   val asHours: Int =
@@ -23,4 +23,5 @@ case class Duration(days: Int = 0, hours: Int = 0) {
   def +(that: Duration): Int =
     plus(that)
 
+  override def compare(that: Duration): Int = this.asHours compare that.asHours
 }
