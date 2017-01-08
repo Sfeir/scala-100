@@ -13,3 +13,5 @@ scalacOptions ++= List(
   "-target:jvm-1.8",
   "-encoding", "UTF-8"
 )
+
+// initialCommands in console := "import com.sfeir.school.scala._"
