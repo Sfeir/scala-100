@@ -9,6 +9,9 @@ case class Training(topic: String, level: Int, planning: Seq[(Int, Location)]) {
   val locations: Seq[Location] =
     // Could also be written in short notation: planning map (_._2)
     planning.map(plan => plan._2)
+
+  lazy val name: String =
+    s"$topic-$level"
 }
 
 
